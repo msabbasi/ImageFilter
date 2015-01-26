@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			changeSettings();
 			return true;
 		}
 		if (id == R.id.action_load_image) {
@@ -54,6 +55,11 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(Intent.ACTION_PICK);
 		intent.setType("image/*");
 		startActivityForResult(intent, IMAGE_REQUEST);
+	}
+	
+	public void changeSettings() {
+		Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+		startActivity(intent);
 	}
 	
 	@Override
