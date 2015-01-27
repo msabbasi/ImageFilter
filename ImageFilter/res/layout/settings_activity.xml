@@ -18,7 +18,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
         android:paddingBottom="14dp"
-        android:text="Medium Text"
+        android:text="Filter type:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
@@ -30,17 +30,17 @@
         android:layout_centerHorizontal="true" >
 
         <RadioButton
-            android:id="@+id/radio0"
+            android:id="@+id/radioMean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="RadioButton" />
+            android:text="Mean" />
 
         <RadioButton
-            android:id="@+id/radio1"
+            android:id="@+id/radioMedian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Median" />
     </RadioGroup>
 
     <TextView
@@ -51,14 +51,26 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
         android:paddingBottom="14dp"
-        android:text="Medium Text"
+        android:text="Filter size"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:text="3" />
+    
     <SeekBar
         android:id="@+id/seekBar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:max="15" />
+
+    
 
 </RelativeLayout>
